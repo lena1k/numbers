@@ -1,7 +1,5 @@
 #! /bin/bash
-
 # numbers.sh
-
 # Lena Khalidi
 
 echo "Enter a positive number":
