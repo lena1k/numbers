@@ -2,25 +2,27 @@
 # numbers.sh
 # Lena Khalidi
 
-echo "Enter a positive number":
+num=1
+echo "Enter a positive number: "
+read NUMBER
 
-read number
+if ((NUMBER > 1))
+then 
+	while ((num < $((NUMBER+1))))
+	do
+		if [ $((num % 2)) -eq 0 ]
+		then
+			echo $num Even
+			num=$((num+1))
+		else 
+			echo $num Odd
+			num=$((num+1))
+		fi
+	done
+else
+	echo "You did not enter a postive number. Please enter a positive number."
+fi
 
-N =1
-
-while [ $N -le $number ]
-
-do
-	if [  $((N%2)) -eq 0 ]
-	then
-		echo $N "even"
-		N=$[$N+1]
-
-	else
-		echo $N "odd"
-		N=$[N+1]
-	fi
-done
 
 
 												
